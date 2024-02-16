@@ -11,7 +11,7 @@ from openai import OpenAI
 #######################################
 
 st.set_page_config(
-<<<<<<< HEAD
+    page_title="Hannah's Travel Assistant",
     page_icon="🗺️",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -189,7 +189,7 @@ with st.sidebar:
 # MAIN
 #######################################
 
-st.title("Hannah's travel assistant")
+st.title("Wanderlust")
 left_col, right_col = st.columns(2)
 
 with left_col:
@@ -238,4 +238,6 @@ with right_col:
 st.chat_input(
     placeholder="Ask your question here",
     key=user_msg_input_key,
-
+    on_submit=on_text_input,
+    args=(status_placeholder,),
+)
